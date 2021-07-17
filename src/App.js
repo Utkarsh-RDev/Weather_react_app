@@ -34,7 +34,7 @@ function App() {
   }
 
   return (
-    <div className = {(typeof weather.main != "undefined") ? ((weather.weather[0].main === "Clear") ? 'app warm': ((weather.weather[0].main === 'Haze') ?'app haze' : 'app')) : 'app'}>
+    <div className = {(typeof weather.main != "undefined") ? ((weather.weather[0].main === "Clear") ? 'app warm': ((weather.weather[0].main === 'Haze') ?'app haze' : 'app')) : 'app none'}>
       <main>
         <div className="search-box">
           <input 
@@ -59,7 +59,9 @@ function App() {
             <div className="weather">{weather.weather[0].main}</div>
           </div>
         </div>
-        ) : ('')}
+        ) : (<div>
+          <h1 className="editnone">Please Write a country name</h1>
+        </div>)}
       </main>
     </div>
   );

@@ -4,15 +4,40 @@
   box-sizing: border-box;
 }
 #root {
-  background: #3e3e3e;
+  background: lightslategray;
 }
 
 body {
   font-family: 'montseratt', sans-serif;
 }
 
+.editnone{
+  position: relative;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 15px 25px;
+  color: #FFF;
+  margin: 0 auto;
+  font-size: 40px;
+  font-weight: 900;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
 .app {
   background-image: url('https://images.unsplash.com/photo-1621717672978-5177ff1d283b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80');
+  background-size: cover;
+  background-position: bottom;
+  transition: width 2s linear 1s;
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0px 1px 9px 7px rgba(0,0,0,0.61);
+}
+
+.app.none{
+  background-image: url('https://images.unsplash.com/photo-1626453144148-2f1a5381734c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
   background-size: cover;
   background-position: bottom;
   transition: width 2s linear 1s;
@@ -49,6 +74,10 @@ body {
   .app.warm {
     width: 100%;
   }
+
+  .app.none {
+    width: 100%;
+  }
   
   .app.haze {
     width: 100%;
@@ -58,6 +87,9 @@ body {
     margin-bottom: 5em !important;
     margin-top: 5em !important;
     margin: 0 auto;
+  }
+  .editnone{
+    width: 100%!important;
   }
 }
 
